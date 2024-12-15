@@ -1,0 +1,175 @@
+/* Register.css */
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #ffffff00; /* Consistent background color */
+  width: 60%;
+  
+}
+
+.heading {
+  font-size: 30px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 30px;
+}
+
+.register-box {
+  background-color: #f7f9fc; /* Same color as the login box */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  text-align: center;
+}
+
+.register-box h2 {
+  color: #1A73E8;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.register-box input[type="text"],
+.register-box input[type="password"],
+.register-box select {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 2px solid #007bff;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  color: #333;
+  box-sizing: border-box;
+  height: 45px;
+  font-family: 'GoogleSans', sans-serif;
+}
+
+.register-box input::placeholder,
+.register-box select {
+  color: #999;
+}
+
+.register-box button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #1A73E8; /* Same button color */
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  transition: background-color 0.3s;
+  font-family: 'GoogleSans', sans-serif;
+  height: 45px;
+}
+
+.register-box button:hover {
+  background-color: #1666c1; /* Slightly darker on hover */
+}
+
+/* Optional: Adjust link styling if present */
+.register-box a {
+  color: #1A73E8;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.register-box a:hover {
+  text-decoration: underline;
+}
+
+/* Custom styling for the dropdown arrow */
+.register-box select {
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  padding-right: 30px; /* Space for the custom arrow */
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black"%3E%3Cpath d="M7 10l5 5 5-5z"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 18px; /* Adjust size of the arrow */
+}
+
+.register-box select:hover {
+  cursor: pointer;
+}
+
+/* Region Dropdown Styling */
+.region-dropdown {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  
+}
+
+.region-dropdown:focus {
+  outline: none;
+  border-color: #007bff;
+  
+}
+
+/*side bar*/
+
+.auth-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 40%;
+  background-color: #007bff;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.sidebar-logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.sidebar h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 80%;
+}
+
+ /* Link styling */
+ .register-box p {
+  margin-top: 5px;
+  color: #555;
+}
+
+.register-box p a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.register-box p a:hover {
+  text-decoration: underline;
+}

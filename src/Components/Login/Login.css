@@ -1,0 +1,139 @@
+body {
+    font-family: 'GoogleSans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* Main white background */
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+/* Container for centering */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color:color(from color srgb r g b);
+    width: 60%;
+  }
+
+  /* Style for the main heading */
+.heading {
+    font-size: 30px;
+    font-weight: bold;
+    color: #006adc;
+    margin-bottom: 20px;
+  }
+
+  /* Centering the entire container */
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:color(from color srgb r g b); /* Background color */
+  }
+  
+  /* Style for the login box */
+.login-box {
+    background-color: #f7f9fc;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    text-align: center;
+  }
+  
+  /* Heading style */
+  .login-box h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Input fields styling */
+  .login-box input[type="text"],
+  .login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    height: 45px;
+    border: 2px solid #007bff;
+    box-sizing: border-box;
+    font-family: 'GoogleSans', sans-serif;
+  }
+  
+  /* Login button styling */
+  .login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: normal;
+    font-family: 'GoogleSans', sans-serif;
+    height: 45px;
+    margin: 8px 0;
+  }
+  
+  .login-box button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Link styling */
+  .login-box p {
+    margin-top: 5px;
+    color: #555;
+  }
+  
+  .login-box p a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .login-box p a:hover {
+    text-decoration: underline;
+  }
+
+  /* Main Auth Container */
+.auth-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 40%;
+  background-color: #007bff;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.sidebar-logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.sidebar h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 80%;
+}
+  

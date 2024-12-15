@@ -1,0 +1,23 @@
+
+
+
+
+/* Import your custom font */
+@font-face {
+  font-family: 'GoogleSans';
+  src: url('./assets/GoogleSans-Regular.ttf') format('truetype');
+  font-weight: 400; /* Adjust as needed */
+  font-style: normal;
+}
+
+/* Apply font globally */
+* {
+  
+  font-family: 'GoogleSans', sans-serif; /* Universal font */
+}
+
+/* Optional: Specific styling for buttons */
+button {
+  font-family: inherit; /* Inherit the global font */
+  font-weight: 500; /* Adjust weight as per design */
+}

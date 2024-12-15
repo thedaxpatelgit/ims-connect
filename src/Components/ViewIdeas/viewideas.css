@@ -1,0 +1,58 @@
+.view-ideas-container {
+    width: 550px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .view-ideas-container h2 {
+    color: #007bff;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+  }
+  
+  .no-ideas {
+    font-size: 1rem;
+    color: #888888;
+  }
+  
+  .ideas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap: 1.5rem;
+  }
+  
+  .idea-card-v {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 100%;
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .idea-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .idea-description {
+    color: #666666;
+    margin-bottom: 0.5rem;
+  }
+  
+  .idea-status {
+    font-weight: bold;
+    color: #28a745;
+    text-align: right;
+  }
+  

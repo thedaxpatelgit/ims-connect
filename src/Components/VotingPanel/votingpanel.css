@@ -1,0 +1,88 @@
+.voting-panel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 10px;
+    padding-bottom: 20px;
+    background-color: #f8f9ff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 580px;
+  }
+
+  
+  .voting-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .voting-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Adjust to two equal columns */
+    gap: 20px; /* Add spacing between grid items */
+    
+    max-width: 1000px; /* Prevents stretching too wide */
+    margin: 0 auto; /* Center the grid */
+  }
+  
+  .idea-card {
+    background: #ffffff;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 220px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .idea-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    color: #333;
+  }
+
+  .idea-card p {
+    margin: 0 0 10px 0;
+    color: #666;
+  }
+  
+  .idea-card:hover {
+    
+    box-shadow: 0 4px 8px rgba(89, 165, 247, 0.15);
+  }
+  
+  .idea-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .idea-description {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .vote-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background 0.3s ease;
+  }
+  
+  .vote-button:hover {
+    background-color: #0056b3;
+  }
+  

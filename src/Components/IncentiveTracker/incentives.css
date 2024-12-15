@@ -1,0 +1,62 @@
+/* Container for the page */
+.incentive-tracker-page {
+    max-width: 1000px;
+    width: 550px;
+    margin: 20px auto;
+    padding: 2rem;
+    background-color: #f7f9fc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title of the incentives section */
+  .incentive-tracker-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  /* Incentive list container */
+  .incentive-tracker-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Individual incentive card */
+  .incentive-card {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .incentive-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Incentive type text */
+  .incentive-type {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  /* Points styling */
+  .incentive-points {
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  /* Empty incentives message */
+  .incentive-empty {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #777;
+  }
+  
