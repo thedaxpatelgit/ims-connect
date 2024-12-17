@@ -92,7 +92,7 @@ return (
       <div className="ideas">
         <div className="ideas-placeholder">
         {recentIdeas.length === 0 ? (
-            <p>No ideas submitted yet.</p>
+            <li>No ideas submitted yet.</li>
           ) : (
             <ul>
               {recentIdeas.map((idea, index) => (
@@ -114,7 +114,7 @@ return (
       <h3>Your Incentives</h3>
       <div className="incentives">  
         <div className="incentives-placeholder">
-          <p>You have earned <strong>{points} points</strong>.</p>
+          <p>You have earned <strong>{points} Incentives</strong>.</p>
         </div>
         <div className="incentives-buttons">
           <button onClick={() => navigate("/incentives")}>View Incentives</button>
