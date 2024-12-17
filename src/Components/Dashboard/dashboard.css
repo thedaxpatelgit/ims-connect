@@ -51,18 +51,20 @@
   border: 2px solid #007bff;
   border-radius: 4px;
   padding: 0.7rem;
-  padding-top: 0.3rem;
-  height: 52px; /* Restore earlier height */
+  
+  height: px; /* Restore earlier height */
   overflow-y: auto; /* Scroll only when necessary */
   box-sizing: border-box;
   text-align: left;
   scrollbar-width: none; /* Makes scrollbar thin */
   scrollbar-color: #007bff #f1f1f1; /* Thumb and track color */
+  display: flex;
+  align-items: center;
 }
 
 .notifications-box ul {
   margin: 0;
-  padding-left: 0rem;
+  padding-left: 0;
   list-style: none;
 }
 
@@ -115,7 +117,7 @@
 
 }
 
-.ideas {
+/*.ideas {
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -124,9 +126,9 @@
 }
 
 .ideas-placeholder {
-  flex: 0.92 1; /* Wider Placeholder */
+  flex: 0.92 1; /* Wider Placeholder 
   padding: 0.7rem;
-  padding-top: 0.3rem;
+  
   background-color: white;
   border: 2px solid #007bff;
   border-radius: 4px;
@@ -139,34 +141,122 @@
   color: #000000;
   text-align: left;
   overflow-y: auto;
-  scrollbar-width: none; /* Makes scrollbar thin */
-  scrollbar-color: #007bff #f1f1f1; /* Thumb and track color */
+  scrollbar-width: none; /* Makes scrollbar thin 
+  scrollbar-color: #007bff #f1f1f1; /* Thumb and track color 
 }
 
-/* Specific styles for Your Recent Ideas list */
+/* Specific styles for Your Recent Ideas list 
 .ideas-placeholder ul {
-  padding-left: 0; /* Adjust the padding to move bullets closer */
-  margin: auto; /* Remove any default margin */
-  list-style: none; /* Ensures bullets are inside the box */
+  padding-left: 0; /* Adjust the padding to move bullets closer 
+  margin: auto; /* Remove any default margin 
+  list-style: none; /* Ensures bullets are inside the box 
 }
 
 .ideas-placeholder li {
-  padding: 0; /* Adjust vertical spacing between list items */
-  font-size: 0.9rem; /* Customize text size if needed */
-  /*color: #333; /* Text color */
-  line-height: 1.2; /* Adjust text spacing */
+  padding: 0; /* Adjust vertical spacing between list items 
+  font-size: 0.9rem; /* Customize text size if needed 
+  /*color: #333; /* Text color 
+  line-height: 1.2; /* Adjust text spacing 
   word-wrap: break-word;
+  list-style: none;
+  list-style-position: outside;
+  
 }
 
 .ideas-placeholder li::before {
-  content: "•"; /* Custom bullet */
+  content: "•"; /* Custom bullet 
   color: #000000;
   display: inline-block;
   width: 1rem;
   margin-right: 0rem;
   font-size: 1rem;
   font-weight: bold;
+} */
+
+.ideas {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
 }
+
+.ideas-placeholder {
+  flex: 0.92 1; /* Maintain width */
+  padding: 0.7rem; /* Adjust padding for visibility */
+  margin: 0; /* Remove unwanted margin */
+  background-color: white;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  height: 107px; /* Ensure enough height */
+  display: flex;
+  box-sizing: border-box;
+  align-items: flex-start; /* Align items to the top */
+  justify-content: flex-start;
+  font-size: 0.9rem;
+  color: #000000;
+  text-align: left;
+  overflow-y: auto; /* Enable scrolling */
+  scrollbar-width: thin;
+  scrollbar-color: #007bff #f1f1f1;
+}
+
+.ideas-placeholder ul {
+  margin: 0; /* Remove unwanted margin */
+  padding-left: 0; /* Ensure space for bullets */
+  list-style: none; /* Remove default bullets */
+}
+
+.ideas-placeholder li {
+  margin-bottom: 0.5rem; /* Add spacing between items */
+  position: relative; /* For custom bullets */
+  padding-left: 1rem; /* Ensure space for bullets */
+}
+
+.ideas-placeholder li::before {
+  content: "•"; /* Custom bullet */
+  position: absolute;
+  left: 0; /* Align bullet at the start */
+  top: 0; /* Align bullet with the text */
+  color: #000000; /* Bullet color (adjust if needed) */
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+
+.ideas-placeholder li > strong {
+  display: block; /* Places the strong (title) on a new line */
+  margin-bottom: 0.2rem; /* Adds a little spacing below the title */
+}
+
+.ideas-placeholder li > span {
+  display: block; /* Ensures descriptions appear below the title */
+  margin-top: 0.2rem;
+}
+
+/* Minimal Scrollbar for WebKit Browsers (Chrome, Safari, Edge) */
+.ideas-placeholder::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.ideas-placeholder::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3); /* Subtle dark thumb */
+  border-radius: 10px;
+}
+
+.ideas-placeholder::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly darker on hover */
+}
+
+.ideas-placeholder::-webkit-scrollbar-track {
+  background-color: transparent; /* No track color */
+}
+
+.ideas-placeholder::-webkit-scrollbar-track:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Light track on hover */
+}
+
 
 .ideas-buttons {
   flex: 1;

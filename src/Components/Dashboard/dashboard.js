@@ -92,12 +92,14 @@ return (
       <div className="ideas">
         <div className="ideas-placeholder">
         {recentIdeas.length === 0 ? (
-            <li>No ideas submitted yet.</li>
+          <ul>
+            <li>No ideas submitted yet.</li> 
+          </ul>
           ) : (
             <ul>
               {recentIdeas.map((idea, index) => (
                 <li key={index}>
-                  <strong>{idea.title}</strong>: {idea.description}
+                  <strong>{idea.title}</strong> {idea.description}
                 </li>
               ))}
             </ul>
