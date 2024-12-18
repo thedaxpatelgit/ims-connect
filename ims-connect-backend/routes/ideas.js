@@ -187,50 +187,6 @@ router.patch('/:id', async (req, res) => {
   /* AI CONFIGURATION */
   const HUGGINGFACE_API_KEY = "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";
 
-
-// Route to analyze ideas
-// Route: POST /api/ideas/analyze-ideas
-/*router.post('/analyze-ideas', async (req, res) => {
-  try {
-    const { ideas } = req.body;
-
-    if (!ideas || ideas.length === 0) {
-      return res.status(400).json({ error: "Ideas array cannot be empty." });
-    }
-
-    const prompt = `Here are some submitted ideas:\n${ideas
-      .map((idea, index) => `${index + 1}. Title: ${idea.title}\nDescription: ${idea.description}`)
-      .join('\n')}
-
-      From these ideas, select and summarize the top 3 ideas based on creativity and usefulness.`;
-
-    const response = await axios.post(
-      "https://api-inference.huggingface.co/models/gpt2", // Replace with an available model
-      { inputs: prompt },
-      {
-        headers: {
-          Authorization: `Bearer ${HUGGINGFACE_API_KEY}`,
-          "Content-Type": "application/json",
-        },
-      }
-    );
-
-    console.log("Hugging Face Response:", response.data);
-
-    const bestIdeas = response.data[0]?.generated_text || 'No ideas found.';
-    res.status(200).json({ bestIdeas });
-  } catch (error) {
-    if (error.response) {
-      console.error("Error response data:", error.response.data);
-      res.status(error.response.status).json({ error: error.response.data });
-    } else {
-      console.error('Error analyzing ideas:', error.message);
-      res.status(500).json({ error: 'Failed to analyze ideas' });
-    }
-  }
-});*/
-
-
 // Route: POST /api/ideas/analyze-ideas
 router.post('/analyze-ideas', async (req, res) => {
   try {
@@ -317,6 +273,17 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+
+router.get('/user/:userId/ideas', async (req, res) => {
+  try {
+    const { userId } = req.params;
+    const ideas = await Idea.find({ userId }).select('title description status voteCount');
+    res.status(200).json(ideas);
+  } catch (error) {
+    console.error("Error fetching user ideas:", error);
+    res.status(500).json({ error: "Failed to fetch user ideas" });
+  }
+});
 
 
 

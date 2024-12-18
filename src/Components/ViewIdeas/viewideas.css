@@ -57,7 +57,7 @@
   
   .idea-status {
     font-weight: bold;
-    color: #28a745;
+    color: #000000;
     text-align: right;
   }
   
@@ -125,3 +125,32 @@
   color: #fff;
 }
 
+.idea-votes {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.idea-info-line {
+  display: flex;
+  justify-content: space-between; /* Align items to left and right */
+  align-items: center; /* Vertically center items */
+  margin: 1rem 0; /* Add spacing */
+  font-size: 1rem;
+}
+
+.votes-section, .status-section {
+  display: flex;
+  align-items: center;
+}
+
+.votes-label, .status-label {
+  font-weight: bold;
+  margin-right: 0.3rem; /* Space between label and value */
+}
+
+.vote-count {
+  color: #007bff; /* Blue color - Change this to any color you like */
+  font-weight: bold; /* Make it bold for emphasis */
+}

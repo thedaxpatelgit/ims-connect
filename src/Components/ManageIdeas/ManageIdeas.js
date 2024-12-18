@@ -217,9 +217,19 @@ const filterBestIdeas = async (ideas) => {
             <div key={idea._id} className="manage-idea-card">
               <h3 className="manage-idea-title">{idea.title}</h3>
               <p className="manage-idea-description">{idea.description}</p>
-              <p className="manage-idea-status">
-                Status: <strong>{idea.status}</strong>
+              
+              <div className="idea-info">
+              <p className="idea-votes-m">
+                Votes: <strong className="vote-count">{idea.voteCount || 0}</strong>
               </p>
+              
+              <p className="manage-idea-status">
+                Status: <strong><span style={{ color: idea.status === 'Rejected' ? 'red' 
+                                                    : idea.status === 'Approved' ? 'green'
+                                                    : idea.status === 'Submitted' ? '#007bff' :'black', }}>{idea.status}</span></strong>
+              </p>
+              </div>
+              
               <div className="manage-idea-buttons">
                 <button
                   className="manage-approve-btn"

@@ -48,7 +48,7 @@
 
 .notifications-box {
   background-color: #ffffff;
-  border: 1px solid #007bff;
+  border: 2px solid #007bff;
   border-radius: 5px;
   padding: 0.7rem;
   height: px; /* Restore earlier height */
@@ -60,7 +60,7 @@
   display: flex;
   align-items: center;
   font-size: 14.5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .notifications-box ul {
@@ -187,7 +187,7 @@
   padding: 0.7rem; /* Adjust padding for visibility */
   margin: 0; /* Remove unwanted margin */
   background-color: white;
-  border: 1px solid #007bff;
+  border: 2px solid #007bff;
   border-radius: 5px;
   height: 107px; /* Ensure enough height */
   display: flex;
@@ -201,7 +201,7 @@
   scrollbar-width: thin;
   scrollbar-color: #007bff transparent;
   scroll-behavior: smooth;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .ideas-placeholder ul {
@@ -301,15 +301,16 @@
 .incentives-placeholder {
   flex: 0.92; /* Wider Placeholder */
   background-color: white;
-  border: 1px solid #007bff;
+  border: 2px solid #007bff;
   border-radius: 4px;
   padding: 0.7rem;
+  padding-right: 0.6rem;
   font-size: 0.9rem;
   color: #007bff;
   text-align: center;
   font-size: inherit;
   height: 22px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .incentives-placeholder p{

@@ -157,11 +157,16 @@ const ViewIdeas = () => {
                   <h3 className="idea-title">{idea.title}</h3>
                   <p className="idea-description">{idea.description}</p>
                   
-                  
-                  <p className="idea-status">
-                    
-                    Status: <strong><span style={{ color: idea.status === 'Rejected' ? 'red' : 'green' }}>{idea.status}</span></strong>
-                  </p>
+                  <div className="idea-info-line">
+                  <div className="votes-section">
+                    <span className="votes-label">Votes:</span> <strong className='vote-count'>{idea.voteCount || 0}</strong>
+                  </div>
+                  <div className="status-section">
+                    <span className="status-label">Status:</span>
+                    <strong style={{ color: idea.status === 'Rejected' ? 'red' : 'green' }}>{idea.status}</strong>
+                  </div>
+                </div>
+
                   <div className="idea-actions">
                     <button onClick={() => handleEdit(idea)} className="edit-btn">
                       Edit

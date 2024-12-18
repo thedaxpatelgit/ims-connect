@@ -207,3 +207,5 @@ export const updateIdea = async (ideaId, updatedData) => {
     throw error;
   }
 };
+
+

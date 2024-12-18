@@ -63,7 +63,7 @@
 .manage-idea-status {
   font-size: 1rem;
   font-weight: bold;
-  color: #007bff;
+  color: #000000;
   margin-bottom: 15px;
   text-align: right;
 }
@@ -72,7 +72,7 @@
 .manage-idea-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 1rem;
 }
 
 /* Approve Button */
@@ -187,3 +187,20 @@
   height: 30px;
   margin-right: 10px; /* Space between icon and text */
 }
+
+.idea-info {
+  display: flex;
+  justify-content: space-between; /* Status on the left, votes on the right */
+  align-items: center;
+}
+
+.idea-votes-m {
+  color: #000000;
+  font-weight: bold;
+}
+
+.vote-count {
+  color: #007bff; /* Blue color or any custom color */
+  font-weight: bold;
+}
+
