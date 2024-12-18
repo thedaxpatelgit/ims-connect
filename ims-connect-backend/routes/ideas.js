@@ -272,4 +272,56 @@ Select the **top 3 ideas** based on creativity and usefulness. Respond with thei
   }
 });
 
+//for update delete
+// Route: PUT /api/ideas/:id - Update an existing idea
+
+router.put('/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { title, description } = req.body;
+
+    // Find and update the idea
+    const updatedIdea = await Idea.findByIdAndUpdate(
+      id,
+      { title, description },
+      { new: true } // Return updated document
+    );
+
+    if (!updatedIdea) {
+      return res.status(404).json({ message: 'Idea not found' });
+    }
+
+    res.status(200).json({ message: 'Idea updated successfully', idea: updatedIdea });
+  } catch (error) {
+    console.error('Error updating idea:', error);
+    res.status(500).json({ message: 'Failed to update idea' });
+  }
+});
+
 module.exports = router;
+
+
+router.delete('/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const deletedIdea = await Idea.findByIdAndDelete(id);
+    if (!deletedIdea) {
+      return res.status(404).json({ message: "Idea not found." });
+    }
+
+    res.status(200).json({ message: "Idea deleted successfully." });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Failed to delete idea." });
+  }
+});
+
+
+
+
+
+
+module.exports = router;
+
+

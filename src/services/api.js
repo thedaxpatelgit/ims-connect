@@ -57,7 +57,7 @@ export const fetchIdeas = async () => {
   }
 };
 
-// Vote on an Idea
+/*// Vote on an Idea
 export const voteOnIdea = async (ideaId, userId) => {
   try {
     const response = await axios.post(`${API_URL}/ideas/${ideaId}/vote`, { userId });
@@ -66,9 +66,18 @@ export const voteOnIdea = async (ideaId, userId) => {
     console.error("Voting error:", error);
     throw error;
   }
+}; */
+
+// Vote on an Idea (Upvote or Downvote)
+export const voteOnIdea = async (ideaId, userId, action) => {
+  try {
+    const response = await axios.post(`${API_URL}/ideas/${ideaId}/vote`, { userId, action });
+    return response.data;
+  } catch (error) {
+    console.error("Voting error:", error.response?.data || error.message);
+    throw error;
+  }
 };
-
-
 
 // Fetch Incentives for a User
 export const fetchIncentives = async (userId) => {
@@ -177,6 +186,24 @@ export const analyzeIdeas = async (ideas) => {
     return response.data; // Returns the best ideas
   } catch (error) {
     console.error('Error analyzing ideas:', error);
+    throw error;
+  }
+};
+
+// Delete an idea
+export const deleteIdea = async (ideaId) => {
+  const response = await axios.delete(`${API_URL}/ideas/${ideaId}`);
+  return response.data;
+};
+
+// Update an idea
+// Update an idea
+export const updateIdea = async (ideaId, updatedData) => {
+  try {
+    const response = await axios.put(`${API_URL}/ideas/${ideaId}`, updatedData);
+    return response.data;
+  } catch (error) {
+    console.error("Error updating idea:", error);
     throw error;
   }
 };

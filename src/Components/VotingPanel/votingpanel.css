@@ -3,12 +3,12 @@
     flex-direction: column;
     align-items: center;
     
-    padding: 10px;
+    padding: 2rem;
     padding-bottom: 20px;
     background-color: #f8f9ff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 580px;
+    width: 550px;
   }
 
   
@@ -19,26 +19,20 @@
     margin-bottom: 20px;
   }
   
-  .voting-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Adjust to two equal columns */
-    gap: 20px; /* Add spacing between grid items */
-    
-    max-width: 1000px; /* Prevents stretching too wide */
-    margin: 0 auto; /* Center the grid */
-  }
+  
   
   .idea-card {
     background: #ffffff;
-    padding: 15px;
+    padding: 1rem;
+    margin-bottom: 1rem;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 220px;
+    
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
@@ -85,4 +79,33 @@
   .vote-button:hover {
     background-color: #0056b3;
   }
+
+  .vote-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .vote-button {
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    color: white;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .vote-button.upvote {
+    background-color: #28a745; /* Green for upvote */
+  }
+  
+  .vote-button.downvote {
+    background-color: #dc3545; /* Red for downvote */
+  }
+  
+  .vote-button:hover {
+    opacity: 0.8;
+  }
+  
   
