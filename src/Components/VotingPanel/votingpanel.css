@@ -42,11 +42,14 @@
     color: #333;
   }
 
-  .idea-card p {
-    margin: 0 0 10px 0;
-    color: #666;
-  }
   
+  
+  .idea-description-v p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
   .idea-card:hover {
     
     box-shadow: 0 4px 8px rgba(89, 165, 247, 0.15);
@@ -84,7 +87,7 @@
     display: flex;
     gap: 10px;
     justify-content: center;
-    margin-top: 10px;
+    
   }
   
   .vote-button {

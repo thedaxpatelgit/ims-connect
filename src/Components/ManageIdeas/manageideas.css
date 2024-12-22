@@ -128,6 +128,7 @@
   background-color: #0056b3;
 }
 
+/*
 .best-ideas-section {
   
   margin-bottom: 1rem;
@@ -151,7 +152,58 @@
   font-size: 1rem;
   color: #333;
 }
+  */
 
+  .best-ideas-section {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 2px solid transparent; 
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    position: relative; 
+    overflow: hidden; 
+    animation: border-glow 2s infinite linear; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styles */
+  .best-ideas-section h3 {
+    color: #28a745;
+  }
+  
+  /* List styles */
+  .best-ideas-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* List item styles */
+  .best-ideas-section li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Keyframes for continuous glowing border */
+  @keyframes border-glow {
+    0% {
+      border: 2px solid rgb(28, 75, 246);
+    }
+    25% {
+      border: 2px solid rgb(20, 143, 230);
+    }
+    50% {
+      border: 2px solid rgb(136, 184, 235);
+    }
+    75% {
+      border: 2px solid rgb(141, 236, 243);
+    }
+    100% {
+      border: 2px solid rgb(91, 91, 255);
+    }
+  }
+  
+  
 
 
 .custom-ai-button {
@@ -204,3 +256,6 @@
   font-weight: bold;
 }
 
+.idea-user {
+  font-weight: bold;
+}

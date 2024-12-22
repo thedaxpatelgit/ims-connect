@@ -114,7 +114,25 @@ function VotingPanel() {
         {ideas.map((idea) => (
           <div key={idea._id} className="idea-card">
             <h3>{idea.title}</h3>
-            <p>{idea.description}</p>
+            <p className='idea-description'>{idea.description}</p>
+            
+            <div className="idea-info">
+              <p className="idea-votes-m">
+                Votes: <strong className="vote-count">{idea.voteCount || 0}</strong>
+              </p>
+              
+              <p className="idea-user">
+                Submitted by: <strong style={ {color: '#007bff'}}>{idea.userId?.username || 'Unknown User'}</strong>
+              </p>
+
+              <p className="manage-idea-status">
+                Status: <strong><span style={{ color: idea.status === 'Rejected' ? 'red' 
+                                                    : idea.status === 'Approved' ? 'green'
+                                                    : idea.status === 'Submitted' ? '#007bff' :'black', }}>{idea.status}</span></strong>
+              </p>
+              </div>
+
+
             <div className="vote-buttons">
               <button
                 className="vote-button upvote"

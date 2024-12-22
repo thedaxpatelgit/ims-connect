@@ -53,7 +53,9 @@ router.post('/', async (req, res) => {
 router.get('/user/:userId', async (req, res) => {
   try {
     const userId = new mongoose.Types.ObjectId(req.params.userId);
-    const ideas = await Idea.find({ userId });
+    const ideas = await Idea.find({ userId }).populate('userId', 'username') // Populate only the 'username' field of the User
+    .lean();
+    
     res.json(ideas);
   } catch (error) {
     console.error("Error fetching user's ideas:", error);
@@ -76,7 +78,9 @@ router.get('/recent/:userId', async (req, res) => {
 // fetch a new idea
 router.get('/', async (req, res) => {
     try {
-      const ideas = await Idea.find();
+      const ideas = await Idea.find()
+      .populate('userId', 'username') // Populate only the 'username' field from the User model
+      .lean();
       res.json(ideas);
     } catch (error) {
       res.status(500).json({ error: 'Error fetching ideas' });
@@ -284,9 +288,6 @@ router.get('/user/:userId/ideas', async (req, res) => {
     res.status(500).json({ error: "Failed to fetch user ideas" });
   }
 });
-
-
-
 
 
 module.exports = router;

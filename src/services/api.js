@@ -57,16 +57,6 @@ export const fetchIdeas = async () => {
   }
 };
 
-/*// Vote on an Idea
-export const voteOnIdea = async (ideaId, userId) => {
-  try {
-    const response = await axios.post(`${API_URL}/ideas/${ideaId}/vote`, { userId });
-    return response.data;
-  } catch (error) {
-    console.error("Voting error:", error);
-    throw error;
-  }
-}; */
 
 // Vote on an Idea (Upvote or Downvote)
 export const voteOnIdea = async (ideaId, userId, action) => {
@@ -197,7 +187,6 @@ export const deleteIdea = async (ideaId) => {
 };
 
 // Update an idea
-// Update an idea
 export const updateIdea = async (ideaId, updatedData) => {
   try {
     const response = await axios.put(`${API_URL}/ideas/${ideaId}`, updatedData);
@@ -207,5 +196,6 @@ export const updateIdea = async (ideaId, updatedData) => {
     throw error;
   }
 };
+
 
 
