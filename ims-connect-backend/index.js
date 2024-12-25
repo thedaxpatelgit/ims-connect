@@ -13,10 +13,19 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
   .then(() => console.log('Database connected'))
   .catch((error) => console.error('Database connection error:', error));
 
-  app.use(cors({
-    origin: "https://ims-connect.vercel.app/",
-    credentials: true
-  }));
+
+const allowedOrigins = ['https://ims-connect.vercel.app', 'http://localhost:3000'];
+
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true, // Allow cookies if needed
+}));
 
 // Route Imports
 const authRoutes = require('./routes/auth');
