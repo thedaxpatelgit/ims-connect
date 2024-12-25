@@ -7,9 +7,9 @@ require('dotenv').config();
 // Middleware
 app.use(cors());
 app.use(express.json());
-
+console.log("Connection String:", process.env.MONGO_URI);
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, serverSelectionTimeoutMS: 5000 })
   .then(() => console.log('Database connected'))
   .catch((error) => console.error('Database connection error:', error));
 
