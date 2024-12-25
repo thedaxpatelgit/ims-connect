@@ -25,6 +25,7 @@ app.use(cors({
     }
   },
   credentials: true, // Allow cookies if needed
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE'
 }));
 
 // Route Imports
