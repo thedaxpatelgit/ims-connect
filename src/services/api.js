@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // Set the base URL for API calls
-const API_URL = 'https://ims-connect-3mbc.onrender.com';  // Adjust this to match the actual server address
+const API_URL = 'https://ims-connect-3mbc.onrender.com/api/auth';  // Adjust this to match the actual server address
 
 // User Authentication (Login)
 export const loginUser = async (username, password) => {
